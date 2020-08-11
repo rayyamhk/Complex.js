@@ -1,6 +1,6 @@
 {
-  "name": "@dragonfly/complex",
-  "version": "1.0.0",
+  "name": "@rayyamhk/complex",
+  "version": "1.0.1",
   "author": "Ray Yam",
   "contributors": [
     "Ray Yam"
@@ -23,7 +23,7 @@
     "url": "https://github.com/rayyamhk/Complex.js.git"
   },
   "license": "MIT",
-  "main": "/build/index.js",
+  "main": "build/index.js",
   "scripts": {
     "build": "npm run test && babel lib --out-dir build --ignore **/*.test.js",
     "test": "eslint lib/** && jest --testPathPattern=lib/tests"
@@ -45,6 +45,5 @@
     "eslint-plugin-import": "^2.22.0",
     "husky": "^4.2.5",
     "jest": "^26.2.2"
-  },
-  "dependencies": {}
+  }
 }
