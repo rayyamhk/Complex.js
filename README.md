@@ -9,12 +9,12 @@ A lightweight and easy-to-use library for you to manipulate complex numbers
 
 ## Install
 ```
-npm install --save @dragonfly/complex
+npm install --save @rayyamhk/complex
 ```
 
 ## How to use
 ```
-const Complex = require('@dragonfly/complex');
+const Complex = require('@rayyamhk/complex');
 
 const num1 = new Complex(3, 4); // 3 + 4i
 const num2 = new Complex(-2); // -2 + 0i
