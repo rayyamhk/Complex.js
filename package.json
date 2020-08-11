@@ -1,0 +1,23 @@
+{
+  "name": "@dragonfly/complex",
+  "version": "1.0.0",
+  "author": "Ray Yam",
+  "description": "A lightweight and easy-to-use library for you to manipulate complex numbers",
+  "keywords": [
+    "Math",
+    "Complex Number",
+    "Operations",
+    "Trigonometry",
+    "Geometry",
+    "Algebra"
+  ],
+  "homepage": "",
+  "license": "ISC",
+  "main": "/dist/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^26.2.2"
+  }
+}
