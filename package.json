@@ -23,7 +23,7 @@
     "url": "https://github.com/rayyamhk/Complex.js.git"
   },
   "license": "MIT",
-  "main": "index.js",
+  "main": "/build/index.js",
   "scripts": {
     "build": "npm run test && babel lib --out-dir build --ignore **/*.test.js",
     "test": "eslint lib/** && jest --testPathPattern=lib/tests"
@@ -42,8 +42,7 @@
     "babel-preset-minify": "^0.5.1",
     "eslint": "^7.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-import": "^2.22.0",
     "husky": "^4.2.5",
     "jest": "^26.2.2"
   },
