@@ -19,7 +19,7 @@
   },
   "overrides": [
     {
-      "files": ["lib/*.js"]
+      "files": ["lib/**/*.js"]
     }
   ]
 }
