@@ -15,9 +15,27 @@
   "license": "ISC",
   "main": "/dist/index.js",
   "scripts": {
-    "test": "jest"
+    "build": "babel lib --out-dir build --ignore **/*.test.js",
+    "test": "eslint lib/** && jest --testPathPattern=lib"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "babel-eslint": "^10.1.0",
+    "babel-preset-minify": "^0.5.1",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jest": "^23.20.0",
+    "husky": "^4.2.5",
     "jest": "^26.2.2"
-  }
+  },
+  "dependencies": {}
 }
