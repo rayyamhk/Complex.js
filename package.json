@@ -2,6 +2,9 @@
   "name": "@dragonfly/complex",
   "version": "1.0.0",
   "author": "Ray Yam",
+  "contributors": [
+    "Ray Yam"
+  ],
   "description": "A lightweight and easy-to-use library for you to manipulate complex numbers",
   "keywords": [
     "Math",
@@ -11,12 +14,19 @@
     "Geometry",
     "Algebra"
   ],
-  "homepage": "",
+  "homepage": "https://github.com/rayyamhk/Complex.js",
+  "bugs": {
+    "url": "https://github.com/rayyamhk/Complex.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rayyamhk/Complex.js.git"
+  },
   "license": "ISC",
-  "main": "/dist/index.js",
+  "main": "index.js",
   "scripts": {
-    "build": "babel lib --out-dir build --ignore **/*.test.js",
-    "test": "eslint lib/** && jest --testPathPattern=lib"
+    "build": "npm run test && babel lib --out-dir build --ignore **/*.test.js",
+    "test": "eslint lib/** && jest --testPathPattern=lib/test"
   },
   "husky": {
     "hooks": {
