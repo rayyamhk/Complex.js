@@ -23,7 +23,31 @@ console.log(sum.toString()); // '1 + 4i'
 ```
 
 ## API
-
+- [constructor](#constructorre-im)
+- [Constant](#constant)
+  - [Complex.NaN](#complexnan)
+  - [Complex.ONE](#complexone)
+  - [Complex.ZERO](#complexzero)
+  - [Complex.PI](#complexpi)
+  - [Complex.E](#complexe)
+  - [Complex.EPSILON](#complexepsilon)
+- [Instance methods](#instance-methods)
+  - [getReal](#getreal)
+  - [getImaginary](#getimaginary)
+  - [getModulus](#getmodulus)
+  - [getArgument](#getargument)
+  - [toString](#tostring)
+- [Static methods](#static-methods)
+  - [isNaN](#isnannum)
+  - [isEqual](#isequalnum1-num2-digit--15)
+  - [add | subtract | multiply | divide](#4-basic-operations)
+  - [conjugate](#conjugatenum)
+  - [inverse](#inversenum)
+  - [pow](#powbase-exponent)
+  - [exp](#expnum)
+  - [log](#lognum)
+  - [sin | cos | tan | csc | sec | cot](#6-trigonometric-functions)
+  - [asin | acos | atan | acsc | asec | acot](#6-inverse-of-trigonometric-functions)
 ### constructor(re, im)
 ```
 @param { Number } re - Real part of the complex number
@@ -103,7 +127,7 @@ Complex.ZERO.getModulus(); // 0
 ```
 Note that the argument of the complex number is the angle between positive real-axis and the vector representing the complex number on complex plane.
 ```
-new Complex(3, 4).getModulus(); // 5
+new Complex(3, 3).getArgument(); // π/4
 Complex.ZERO.getArgument(); // undefined
 ```
 
@@ -268,9 +292,9 @@ Note that if the argument is out of its domain, it returns `Complex.NaN`
 Complex.asin(num); // Domain: entire complex plane C
 Complex.acos(num); // Domain: entire complex plane C
 Complex.atan(num); // Domain: entire complex plane C except the set { i, -i }
-Complex.csc(num); // Domain: entire complex plane C except the set { 0 }
-Complex.sec(num); // Domain: entire complex plane C except the set { 0 }
-Complex.cot(num); // Domain: entire complex plane C except the set { i, -i , 0 }
+Complex.acsc(num); // Domain: entire complex plane C except the set { 0 }
+Complex.asec(num); // Domain: entire complex plane C except the set { 0 }
+Complex.acot(num); // Domain: entire complex plane C except the set { i, -i , 0 }
 ```
 
 ## Build
