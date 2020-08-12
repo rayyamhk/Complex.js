@@ -1,6 +1,6 @@
 {
   "name": "@rayyamhk/complex",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Ray Yam",
   "contributors": [
     "Ray Yam"
@@ -8,6 +8,7 @@
   "description": "A lightweight and easy-to-use library for you to manipulate complex numbers",
   "keywords": [
     "Math",
+    "Mathematics",
     "Complex Number",
     "Operations",
     "Trigonometry",
@@ -25,7 +26,7 @@
   "license": "MIT",
   "main": "build/index.js",
   "scripts": {
-    "build": "npm run test && babel lib --out-dir build --ignore **/*.test.js",
+    "build": "npm run test && webpack",
     "test": "eslint && jest --testPathPattern=lib/tests"
   },
   "husky": {
@@ -34,17 +35,17 @@
     }
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.11.0",
     "babel-eslint": "^10.1.0",
-    "babel-preset-minify": "^0.5.1",
+    "babel-loader": "^8.1.0",
     "eslint": "^7.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jest": "^23.20.0",
     "husky": "^4.2.5",
-    "jest": "^26.2.2"
+    "jest": "^26.2.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   }
 }
