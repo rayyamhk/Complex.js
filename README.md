@@ -23,7 +23,31 @@ console.log(sum.toString()); // '1 + 4i'
 ```
 
 ## API
-
+- [constructor](#constructorre-im)
+- [Constant](#constant)
+  - [Complex.NaN](#complexnan)
+  - [Complex.ONE](#complexone)
+  - [Complex.ZERO](#complexzero)
+  - [Complex.PI](#complexpi)
+  - [Complex.E](#complexe)
+  - [Complex.EPSILON](#complexepsilon)
+- [Instance methods](#instance-methods)
+  - [getReal](#getreal)
+  - [getImaginary](#getimaginary)
+  - [getModulus](#getmodulus)
+  - [getArgument](#getargument)
+  - [toString](#tostring)
+- [Static methods](#static-methods)
+  - [isNaN](#isnannum)
+  - [isEqual](#isequalnum1-num2-digit--15)
+  - [add | subtract | multiply | divide](#4-basic-operations)
+  - [conjugate](#conjugatenum)
+  - [inverse](#inversenum)
+  - [pow](#powbase-exponent)
+  - [exp](#expnum)
+  - [log](#lognum)
+  - [sin | cos | tan | csc | sec | cot](#6-trigonometric-functions)
+  - [asin | acos | atan | acsc | asec | acot](#6-inverse-of-trigonometric-functions)
 ### constructor(re, im)
 ```
 @param { Number } re - Real part of the complex number
