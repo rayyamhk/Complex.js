@@ -127,7 +127,7 @@ Complex.ZERO.getModulus(); // 0
 ```
 Note that the argument of the complex number is the angle between positive real-axis and the vector representing the complex number on complex plane.
 ```
-new Complex(3, 4).getModulus(); // 5
+new Complex(3, 3).getArgument(); // π/4
 Complex.ZERO.getArgument(); // undefined
 ```
 
@@ -292,9 +292,9 @@ Note that if the argument is out of its domain, it returns `Complex.NaN`
 Complex.asin(num); // Domain: entire complex plane C
 Complex.acos(num); // Domain: entire complex plane C
 Complex.atan(num); // Domain: entire complex plane C except the set { i, -i }
-Complex.csc(num); // Domain: entire complex plane C except the set { 0 }
-Complex.sec(num); // Domain: entire complex plane C except the set { 0 }
-Complex.cot(num); // Domain: entire complex plane C except the set { i, -i , 0 }
+Complex.acsc(num); // Domain: entire complex plane C except the set { 0 }
+Complex.asec(num); // Domain: entire complex plane C except the set { 0 }
+Complex.acot(num); // Domain: entire complex plane C except the set { i, -i , 0 }
 ```
 
 ## Build
