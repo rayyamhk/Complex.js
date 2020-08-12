@@ -26,7 +26,7 @@
   "main": "build/index.js",
   "scripts": {
     "build": "npm run test && babel lib --out-dir build --ignore **/*.test.js",
-    "test": "eslint lib/** && jest --testPathPattern=lib/tests"
+    "test": "eslint && jest --testPathPattern=lib/tests"
   },
   "husky": {
     "hooks": {
@@ -43,6 +43,7 @@
     "eslint": "^7.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0",
     "husky": "^4.2.5",
     "jest": "^26.2.2"
   }
