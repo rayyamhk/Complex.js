@@ -1,6 +1,6 @@
 {
   "name": "@rayyamhk/complex",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Ray Yam",
   "contributors": [
     "Ray Yam"
@@ -15,13 +15,13 @@
     "Geometry",
     "Algebra"
   ],
-  "homepage": "https://github.com/rayyamhk/Complex.js",
+  "homepage": "https://github.com/ryamhk/Complex.js",
   "bugs": {
-    "url": "https://github.com/rayyamhk/Complex.js/issues"
+    "url": "https://github.com/ryamhk/Complex.js/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rayyamhk/Complex.js.git"
+    "url": "https://github.com/ryamhk/Complex.js.git"
   },
   "license": "MIT",
   "main": "build/complex.js",
