@@ -5,6 +5,8 @@ A lightweight and easy-to-use library for you to manipulate complex numbers
 - Lightweight
 - Comprehensive
 - Easy to use
+- No dependencies
+- 1000+ Test cases
 - No INFINITY!!
 
 ## Install
@@ -21,6 +23,20 @@ const num2 = new Complex(-2); // -2 + 0i
 const sum = Complex.add(num1, num2);
 console.log(sum.toString()); // '1 + 4i'
 ```
+
+## Build
+```
+npm install
+npm run build
+```
+It creates a production version in `/build`
+
+## Test
+```
+npm install
+npm run test
+```
+It runs all tests in `/lib/tests`
 
 ## API
 - [constructor](#constructorre-im)
@@ -296,20 +312,6 @@ Complex.acsc(num); // Domain: entire complex plane C except the set { 0 }
 Complex.asec(num); // Domain: entire complex plane C except the set { 0 }
 Complex.acot(num); // Domain: entire complex plane C except the set { i, -i , 0 }
 ```
-
-## Build
-```
-npm install
-npm run build
-```
-It builds the minified version in `/build`
-
-## Test
-```
-npm install
-npm run test
-```
-It runs all tests in `/lib/tests`
 
 ## How to contribute
 You are welcome to contribute by:
