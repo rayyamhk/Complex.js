@@ -139,7 +139,7 @@ Complex.ZERO.getModulus(); // 0
 
 #### getArgument()
 ```
-@return { Number } - Returns the argument of the complex number
+@return { Number } - Returns the argument of the complex number from the interval [0, 2π)
 ```
 Note that the argument of the complex number is the angle between positive real-axis and the vector representing the complex number on complex plane.
 ```
