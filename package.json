@@ -1,6 +1,6 @@
 {
   "name": "@rayyamhk/complex",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "Ray Yam",
   "contributors": [
     "Ray Yam"
@@ -24,7 +24,7 @@
     "url": "https://github.com/rayyamhk/Complex.js.git"
   },
   "license": "MIT",
-  "main": "build/complex.js",
+  "main": "lib/index",
   "scripts": {
     "build": "npm run test && babel src --out-dir lib --ignore src/**/*.test.js",
     "test": "eslint && jest --testPathPattern=src/tests"
