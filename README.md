@@ -318,7 +318,6 @@ You are welcome to contribute by:
 - Reporting bugs
 - Fixing bugs
 - Adding new features
-- Adding more meaningful test cases
 - Improving performance
 - Improving code style of this library
 
