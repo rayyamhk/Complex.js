@@ -18,6 +18,6 @@
     "linebreak-style": ["error", "windows"]
   },
   "ignorePatterns": [
-    "build/*.js"
+    "lib/*.js"
   ]
 }

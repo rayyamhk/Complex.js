@@ -1,4 +1,4 @@
-const Complex = require('../index');
+const Complex = require('..');
 
 describe('4 basic operator tests', () => {
   const samples = [

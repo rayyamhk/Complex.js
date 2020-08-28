@@ -1,4 +1,4 @@
-const Complex = require('../index');
+const Complex = require('..');
 
 describe('inverse tests', () => {
   const samples = [

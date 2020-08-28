@@ -1,5 +1,5 @@
 /* eslint-disable jest/no-conditional-expect */
-const Complex = require('../index');
+const Complex = require('..');
 
 describe('instance methods tests', () => {
   const samples = [
