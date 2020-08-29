@@ -6,13 +6,11 @@ on:
       - master
 
 jobs:
-  test_pull_request:
+  CI_Test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v2
-      - name: Setup Node
-        uses: 'actions/setup-node@v1'
+      - uses: actions/checkout@v2
+      - uses: 'actions/setup-node@v1'
         with:
           node-version: 12
       - run: npm ci

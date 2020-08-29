@@ -1,6 +1,6 @@
 {
   "name": "@rayyamhk/complex",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Ray Yam",
   "contributors": [
     "Ray Yam"
@@ -30,11 +30,6 @@
     "build": "babel src --out-dir lib --ignore src/**/*.test.js",
     "publish": "npm publish --access public"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test"
-    }
-  },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
@@ -44,7 +39,6 @@
     "eslint": "^7.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-jest": "^23.20.0",
-    "husky": "^4.2.5",
     "jest": "^26.2.2"
   }
 }
