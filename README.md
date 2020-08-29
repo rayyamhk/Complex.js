@@ -39,7 +39,9 @@ npm run test
 It runs all tests in `/lib/tests`
 
 ## API
-https://rayyamhk.github.io/Complex.js/index.html
+[https://rayyamhk.github.io/Complex.js/index.html](https://rayyamhk.github.io/Complex.js/index.html)
+
+## Examples
 
 ### constructor(re, im)
 ```javascript
@@ -50,33 +52,6 @@ new Complex('3'); // Complex.NaN
 new Complex(3, 4); // 3 + 4i
 new Complex(3, Infinity); // Complex.NaN
 ```
-
-### Constant
-
-#### Complex.NaN
-It represents `NaN` in this library. It is equivalent to `new Complex(NaN)`. 
-It is **important** to know that this library doesn't introduce the concept of `Complex Infinity`, all `Infinity` in this library 
-are represented by `Complex.NaN`.
-```javascript
-const num = new Complex(3, 4);
-const quot = Complex.divide(num, Complex.ZERO); // Complex.NaN
-```
-
-#### Complex.ONE
-It is equivalent to `new Complex(1)`
-
-#### Complex.ZERO
-It is equivalent to `new Complex(0)`
-
-#### Complex.PI
-It is equivalent to `new Complex(Math.PI)`
-
-#### Complex.E
-It is equivalent to `new Complex(Math.E)`
-
-#### Complex.EPSILON
-It represents the value of `5e-16`, which is the smallest number considered as `non-zero` in this library. In the other words, any number less than `Complex.EPSILON`
-is considered as `0`. Note that `Complex.EPSILON` is `js Number` instead of instance of `Complex`.
 
 ### Instance methods
 
