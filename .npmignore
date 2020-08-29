@@ -4,4 +4,5 @@
 .eslintrc
 .gitignore
 /.github
+jsdoc.config.json
 package-lock.json

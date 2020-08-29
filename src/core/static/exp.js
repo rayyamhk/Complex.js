@@ -1,7 +1,6 @@
-/** @module core/static */
-
 /**
- * Calculates the exponential function with base E
+ * Calculates the exponential function with base E.
+ * @memberof Complex
  * @static
  * @param {Complex} num - Exponent
  * @returns {Complex} The value of E to the power of num

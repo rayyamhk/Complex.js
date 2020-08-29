@@ -27,7 +27,9 @@
 
 <nav >
     
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Complex.html">Complex</a></li></ul><h3>Modules</h3><ul><li><a href="module-core_instance.html">core/instance</a><ul class='methods'><li data-type='method'><a href="module-core_instance.html#getArgument">getArgument</a></li><li data-type='method'><a href="module-core_instance.html#getImaginary">getImaginary</a></li><li data-type='method'><a href="module-core_instance.html#getModulus">getModulus</a></li><li data-type='method'><a href="module-core_instance.html#getReal">getReal</a></li><li data-type='method'><a href="module-core_instance.html#toString">toString</a></li></ul></li><li></li><li></li><li></li><li></li><li><a href="module-core_static.html">core/static</a><ul class='methods'><li data-type='method'><a href="module-core_static.html#.acos">acos</a></li><li data-type='method'><a href="module-core_static.html#.acot">acot</a></li><li data-type='method'><a href="module-core_static.html#.acsc">acsc</a></li><li data-type='method'><a href="module-core_static.html#.add">add</a></li><li data-type='method'><a href="module-core_static.html#.asec">asec</a></li><li data-type='method'><a href="module-core_static.html#.asin">asin</a></li><li data-type='method'><a href="module-core_static.html#.atan">atan</a></li><li data-type='method'><a href="module-core_static.html#.conjugate">conjugate</a></li><li data-type='method'><a href="module-core_static.html#.cos">cos</a></li><li data-type='method'><a href="module-core_static.html#.cot">cot</a></li><li data-type='method'><a href="module-core_static.html#.csc">csc</a></li><li data-type='method'><a href="module-core_static.html#.divide">divide</a></li><li data-type='method'><a href="module-core_static.html#.exp">exp</a></li><li data-type='method'><a href="module-core_static.html#.inverse">inverse</a></li><li data-type='method'><a href="module-core_static.html#.isEqual">isEqual</a></li><li data-type='method'><a href="module-core_static.html#.isNaN">isNaN</a></li><li data-type='method'><a href="module-core_static.html#.log">log</a></li><li data-type='method'><a href="module-core_static.html#.multiply">multiply</a></li><li data-type='method'><a href="module-core_static.html#.pow">pow</a></li><li data-type='method'><a href="module-core_static.html#.sec">sec</a></li><li data-type='method'><a href="module-core_static.html#.sin">sin</a></li><li data-type='method'><a href="module-core_static.html#.subtract">subtract</a></li><li data-type='method'><a href="module-core_static.html#.tan">tan</a></li></ul></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Complex.html">Complex</a><ul class='methods'><li data-type='method'><a href="Complex.html#getArgument">getArgument</a></li><li data-type='method'><a href="Complex.html#getImaginary">getImaginary</a></li><li data-type='method'><a href="Complex.html#getModulus">getModulus</a></li><li data-type='method'><a href="Complex.html#getReal">getReal</a></li><li data-type='method'><a href="Complex.html#toString">toString</a></li><li data-type='method'><a href="Complex.html#.acos">acos</a></li><li data-type='method'><a href="Complex.html#.acot">acot</a></li><li data-type='method'><a href="Complex.html#.acsc">acsc</a></li><li data-type='method'><a href="Complex.html#.add">add</a></li><li data-type='method'><a href="Complex.html#.asec">asec</a></li><li data-type='method'><a href="Complex.html#.asin">asin</a></li><li data-type='method'><a href="Complex.html#.atan">atan</a></li><li data-type='method'><a href="Complex.html#.conjugate">conjugate</a></li><li data-type='method'><a href="Complex.html#.cos">cos</a></li><li data-type='method'><a href="Complex.html#.cot">cot</a></li><li data-type='method'><a href="Complex.html#.csc">csc</a></li><li data-type='method'><a href="Complex.html#.divide">divide</a></li><li data-type='method'><a href="Complex.html#.exp">exp</a></li><li data-type='method'><a href="Complex.html#.inverse">inverse</a></li><li data-type='method'><a href="Complex.html#.isEqual">isEqual</a></li><li data-type='method'><a href="Complex.html#.isNaN">isNaN</a></li><li data-type='method'><a href="Complex.html#.log">log</a></li><li data-type='method'><a href="Complex.html#.multiply">multiply</a></li><li data-type='method'><a href="Complex.html#.pow">pow</a></li><li data-type='method'><a href="Complex.html#.sec">sec</a></li><li data-type='method'><a href="Complex.html#.sin">sin</a></li><li data-type='method'><a href="Complex.html#.subtract">subtract</a></li><li data-type='method'><a href="Complex.html#.tan">tan</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -43,7 +45,8 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Creates a new Complex Number
+ * Creates a new Complex Number.
+ * @namespace Complex
  * @class
  * @param {number} arg1 - The real part of the Complex Number
  * @param {number} arg2 - The imaginary part of the Complex Number
@@ -81,6 +84,8 @@ function Complex(arg1, arg2) {
   return this;
 }
 
+module.exports = Complex;
+
 Complex.prototype.getReal = require('./core/instance/getReal');
 Complex.prototype.getImaginary = require('./core/instance/getImaginary');
 Complex.prototype.getModulus = require('./core/instance/getModulus');
@@ -112,42 +117,33 @@ Complex.asec = require('./core/static/asec');
 Complex.acot = require('./core/static/acot');
 
 /**
- * It represents NaN in this library. It is equivalent to new Complex(NaN).
+ * It represents NaN in this library. It is equivalent to new Complex(NaN).&lt;br>&lt;br>
+ * 
  * It is important to know that this library does not introduce the concept of Complex Infinity,
  * all Infinity in this library are represented by Complex.NaN.
  * @static
  */
 Complex.NaN = new Complex(NaN);
 
-/**
- * @static
- */
+/** @static */
 Complex.ONE = new Complex(1);
 
-/**
- * @static
- */
+/** @static */
 Complex.ZERO = new Complex(0);
 
-/**
- * @static
- */
+/** @static */
 Complex.PI = new Complex(Math.PI);
 
-/**
- * @static
- */
+/** @static */
 Complex.E = new Complex(Math.E);
-
 /**
  * It represents the value of 5e-16, which is the smallest number considered as non-zero in this library.
- * In the other words, any number less than Complex.EPSILON is considered as 0.
+ * In the other words, any number less than Complex.EPSILON is considered as 0.&lt;br>&lt;br>
+ * 
  * Note that Complex.EPSILON is number instead of instance of Complex.
  * @static
  */
 Complex.EPSILON = 1 / ((10 ** 15) * 2);
-
-module.exports = Complex;
 </code></pre>
         </article>
     </section>
@@ -162,12 +158,14 @@ module.exports = Complex;
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a> on Sat Aug 29 2020 18:42:00 GMT+0800 (GMT+08:00) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a> on Sun Aug 30 2020 01:31:01 GMT+0800 (GMT+08:00) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
 <script src="scripts/polyfill.js"></script>
 <script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
 
 
 

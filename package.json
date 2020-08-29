@@ -1,6 +1,6 @@
 {
   "name": "@rayyamhk/complex",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "author": "Ray Yam",
   "contributors": [
     "Ray Yam"
@@ -15,7 +15,7 @@
     "Geometry",
     "Algebra"
   ],
-  "homepage": "https://github.com/rayyamhk/Complex.js",
+  "homepage": "https://rayyamhk.github.io/Complex.js/Complex.html",
   "bugs": {
     "url": "https://github.com/rayyamhk/Complex.js/issues"
   },

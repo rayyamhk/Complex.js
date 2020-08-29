@@ -19,5 +19,9 @@
     "recurse": true,
     "destination": "./docs",
     "template": "./docs/docdash"
+  },
+  "docdash": {
+    "sort": false,
+    "search": true
   }
 }

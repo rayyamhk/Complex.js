@@ -1,7 +1,6 @@
-/** @module core/static */
-
 /**
  * Determines whether the Complex Number is NaN or not.
+ * @memberof Complex
  * @static
  * @param {Complex} num - Any Complex number
  * @returns {boolean} Returns true if one of real and imaginary part are NaN

@@ -1,8 +1,9 @@
-/** @module core/static */
- 
 /**
  * Calculates the inverse tangent of a Complex Number.
- * The domain of this function is C / { i , -i }.
+ * The domain of this function is C / { i , -i }.<br><br>
+ * 
+ * If the argument is out of its domain, it returns Complex.NaN.
+ * @memberof Complex
  * @static
  * @param {Complex} num - Any Complex Number except i and -i
  * @returns {Complex} The result of inverse tangent function

@@ -1,9 +1,9 @@
-/** @module core/static */
- 
 /**
- * Calculates the quotient of two Complex Number.
+ * Calculates the quotient of two Complex Number.<br><br>
+ * 
  * Note that if the denominator is considered as 0,
- * returns NaN instead of Infinity.
+ * returns Complex.NaN instead of Infinity.
+ * @memberof Complex
  * @static
  * @param {Complex} num1 - The Complex Number on the left of '/' operator.
  * @param {Complex} num2 - The Complex Number on the right of '/' operator.

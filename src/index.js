@@ -1,5 +1,6 @@
 /**
- * Creates a new Complex Number
+ * Creates a new Complex Number.
+ * @namespace Complex
  * @class
  * @param {number} arg1 - The real part of the Complex Number
  * @param {number} arg2 - The imaginary part of the Complex Number
@@ -37,6 +38,8 @@ function Complex(arg1, arg2) {
   return this;
 }
 
+module.exports = Complex;
+
 Complex.prototype.getReal = require('./core/instance/getReal');
 Complex.prototype.getImaginary = require('./core/instance/getImaginary');
 Complex.prototype.getModulus = require('./core/instance/getModulus');
@@ -68,39 +71,30 @@ Complex.asec = require('./core/static/asec');
 Complex.acot = require('./core/static/acot');
 
 /**
- * It represents NaN in this library. It is equivalent to new Complex(NaN).
+ * It represents NaN in this library. It is equivalent to new Complex(NaN).<br><br>
+ * 
  * It is important to know that this library does not introduce the concept of Complex Infinity,
  * all Infinity in this library are represented by Complex.NaN.
  * @static
  */
 Complex.NaN = new Complex(NaN);
 
-/**
- * @static
- */
+/** @static */
 Complex.ONE = new Complex(1);
 
-/**
- * @static
- */
+/** @static */
 Complex.ZERO = new Complex(0);
 
-/**
- * @static
- */
+/** @static */
 Complex.PI = new Complex(Math.PI);
 
-/**
- * @static
- */
+/** @static */
 Complex.E = new Complex(Math.E);
-
 /**
  * It represents the value of 5e-16, which is the smallest number considered as non-zero in this library.
- * In the other words, any number less than Complex.EPSILON is considered as 0.
+ * In the other words, any number less than Complex.EPSILON is considered as 0.<br><br>
+ * 
  * Note that Complex.EPSILON is number instead of instance of Complex.
  * @static
  */
 Complex.EPSILON = 1 / ((10 ** 15) * 2);
-
-module.exports = Complex;

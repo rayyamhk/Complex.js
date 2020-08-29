@@ -1,8 +1,11 @@
-/** @module core/instance */
- 
 /**
- * Calculates the argument of a Complex Number which is restricted to the interval [ 0, 2π ).
+ * Calculates the argument of a Complex Number which is restricted to the interval [ 0, 2π ).<br><br>
+ * 
+ * The argument of the Complex Number is the angle between positive real-axis
+ * and the vector representing the Complex Number on Complex plane.<br><br>
+ * 
  * If the given Complex Number is considered as 0, returns undefined.
+ * @memberof Complex
  * @instance
  * @returns {number} The argument of the Complex Number
  */

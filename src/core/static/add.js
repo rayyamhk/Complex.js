@@ -1,7 +1,6 @@
-/** @module core/static */
- 
 /**
  * Calculates the sum of two Complex Number.
+ * @memberof Complex
  * @static
  * @param {Complex} num1 - The Complex Number on the left of '+' operator.
  * @param {Complex} num2 - The Complex Number on the right of '+' operator.

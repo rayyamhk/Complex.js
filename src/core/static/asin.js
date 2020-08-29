@@ -1,7 +1,6 @@
-/** @module core/static */
- 
 /**
  * Calculates the inverse sine of a Complex Number.
+ * @memberof Complex
  * @static
  * @param {Complex} num - Any Complex Number
  * @returns {Complex} The result of inverse sine function

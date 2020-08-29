@@ -1,7 +1,6 @@
-/** @module core/instance */
- 
 /**
- * Returns the real part of a Complex Number.
+ * Gets the real part of a Complex Number.
+ * @memberof Complex
  * @instance
  * @returns {number} The real part of the Complex Number
  */

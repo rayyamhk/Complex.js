@@ -1,7 +1,6 @@
-/** @module core/instance */
- 
 /**
- * Returns the imaginary part of a Complex Number.
+ * Gets the imaginary part of a Complex Number.
+ * @memberof Complex
  * @instance
  * @returns {number} The imaginary part of the Complex Number
  */

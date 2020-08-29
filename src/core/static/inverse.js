@@ -1,7 +1,6 @@
-/** @module core/static */
- 
 /**
  * Calculates the inverse of the Complex Number.
+ * @memberof Complex
  * @static
  * @param {Complex} num - Complex Number
  * @returns {number} Inverse of the Complex Number

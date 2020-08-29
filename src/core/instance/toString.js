@@ -1,8 +1,8 @@
-/** @module core/instance */
-
 /**
+ * Gets the stringified and formatted Complex Number.
+ * @memberof Complex
  * @instance
- * @returns {string} The stringified and formatted complex number
+ * @returns {string} The stringified and formatted Complex Number
  */
 function toString() {
   const {

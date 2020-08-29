@@ -1,8 +1,7 @@
-/** @module core/static */
-
 /**
  * Calculates the inverse cosine of a Complex Number.
- * @static 
+ * @memberof Complex
+ * @static
  * @param {Complex} num - Any Complex Number
  * @returns {Complex} The result of inverse cosine function
  */

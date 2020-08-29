@@ -1,7 +1,6 @@
-/** @module core/static */
-
 /**
- * Calculates the complex conjugate of the Complex Number
+ * Calculates the complex conjugate of the Complex Number.
+ * @memberof Complex
  * @static
  * @param {Complex} num - Complex number
  * @returns {Complex} The complex conjugate of the Complex Number

@@ -1,10 +1,10 @@
-/** @module core/static */
- 
 /**
- * Calculates the natural log of the Complex Number.
+ * Calculates the natural log of the Complex Number.<br><br>
+ * 
  * Note that complex log is a multivalued function,
  * and this function only provides the principal value by
  * restricting the imaginary part to the interval [0, 2π).
+ * @memberof Complex
  * @static
  * @param {Complex} num - Complex Number
  * @returns {number} Natural log of the Complex Number

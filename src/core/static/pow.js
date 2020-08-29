@@ -1,11 +1,10 @@
-/** @module core/static */
-
 /**
  * Calculates the power of the Complex Number.
- * The exponent can be any real number.
- * If you want to calculate the k-th root,
- * you should know that it only returns one out of k solutions,
- * although there are total k possible solutions for k-th root problem.
+ * The exponent can be any real number or Complex Number<br><br>
+ * 
+ * You can find the k-th root of complex number by setting the exponent to 1 / k.
+ * But you should know that it only returns one out of k possible solutions.
+ * @memberof Complex
  * @static
  * @param {Complex} num - Base
  * @param {Complex|number} n - Exponent
