@@ -39,38 +39,9 @@ npm run test
 It runs all tests in `/lib/tests`
 
 ## API
-- [constructor](#constructorre-im)
-- [Constant](#constant)
-  - [Complex.NaN](#complexnan)
-  - [Complex.ONE](#complexone)
-  - [Complex.ZERO](#complexzero)
-  - [Complex.PI](#complexpi)
-  - [Complex.E](#complexe)
-  - [Complex.EPSILON](#complexepsilon)
-- [Instance methods](#instance-methods)
-  - [getReal](#getreal)
-  - [getImaginary](#getimaginary)
-  - [getModulus](#getmodulus)
-  - [getArgument](#getargument)
-  - [toString](#tostring)
-- [Static methods](#static-methods)
-  - [isNaN](#isnannum)
-  - [isEqual](#isequalnum1-num2-digit--15)
-  - [add | subtract | multiply | divide](#4-basic-operations)
-  - [conjugate](#conjugatenum)
-  - [inverse](#inversenum)
-  - [pow](#powbase-exponent)
-  - [exp](#expnum)
-  - [log](#lognum)
-  - [sin | cos | tan | csc | sec | cot](#6-trigonometric-functions)
-  - [asin | acos | atan | acsc | asec | acot](#6-inverse-of-trigonometric-functions)
+https://rayyamhk.github.io/Complex.js/index.html
+
 ### constructor(re, im)
-```
-@param { Number } re - Real part of the complex number
-@param { Number } im - Imaginary part of the complex number
-@return { Complex } Returns an instance of Complex
-```
-Note that the second argument, i.e. `im`, is optional.
 ```javascript
 new Complex(); // Complex.NaN
 new Complex(3); // 3 + 0i
@@ -110,27 +81,18 @@ is considered as `0`. Note that `Complex.EPSILON` is `js Number` instead of inst
 ### Instance methods
 
 #### getReal()
-```
-@return { Number } - Returns the real part of the complex number
-```
 ```javascript
 new Complex(3, 4).getReal(); // 3
 new Complex(0, 1).getReal(); // 0
 ```
 
 #### getImaginary()
-```
-@return { Number } - Returns the imaginary part of the complex number
-```
 ```javascript
 new Complex(3, 4).getImaginary(); // 4
 Complex.ZERO.getImaginary(); // 0
 ```
 
 #### getModulus()
-```
-@return { Number } - Returns the modulus of the complex number 
-```
 Note that the modulus of the complex number is the length of the vector representing the complex number on complex plane.
 ```javascript
 new Complex(3, 4).getModulus(); // 5
@@ -138,9 +100,6 @@ Complex.ZERO.getModulus(); // 0
 ```
 
 #### getArgument()
-```
-@return { Number } - Returns the argument of the complex number from the interval [0, 2π)
-```
 Note that the argument of the complex number is the angle between positive real-axis and the vector representing the complex number on complex plane.
 ```javascript
 new Complex(3, 3).getArgument(); // π/4
@@ -148,9 +107,6 @@ Complex.ZERO.getArgument(); // undefined
 ```
 
 #### toString()
-```
-@return { String } - Returns the stringified complex number
-```
 ```javascript
 new Complex(3, 4).toString(); // '3 + 4i'
 new Complex(3.1415).toString(); // '3.1415'
@@ -160,11 +116,6 @@ Complex.NaN.toString(); // 'NaN'
 ### Static methods
 
 #### isNaN(num)
-```
-@param { Complex } num
-@return { Boolean } - Returns true if it is considered as NaN
-```
-It determines whether the given complex number is considered as NaN or not.
 ```javascript
 Complex.isNaN(new Complex(3)); // false
 Complex.isNaN(new Complex(3, 4)); // false
@@ -173,13 +124,6 @@ Complex.isNaN(Complex.NaN); // true
 ```
 
 #### isEqual(num1, num2, digit = 15)
-```
-@param { Complex } num1
-@param { Complex } num2
-@param { Integer } [ digit = 15 ] - Number of significant digits
-@return { Boolean } - Returns true if two complex numbers are considered as identical
-```
-It determines whether two complex numbers are considered as identical.
 The optional argument `digit` limits the number of digits to check after the decimal point.\
 The test criterion is `Math.abs(x - y) < 1 / (10 ** digit * 2)`. For default value 15, it should be `5e-16`.
 That means if the difference of two numbers is less than `5e-16`, they are considered as same value.
@@ -194,11 +138,6 @@ Complex.isEqual(Complex.NaN, new Complex(1 / 0)); // true as both are considered
 ```
 
 #### 4 basic operations
-```
-@param { Complex } num1 - Complex number on the left of the operator
-@param { Complex } num2 - Complex number on the right of the operator
-@return { Complex } - Returns Sum | Difference | Product | Quotient of two numbers
-```
 Note that for `Complex.divide`, if the denominator, i.e. `num2`, is considered as `0`, it returns `Complex.NaN`.
 ```javascript
 const num1 = new Complex(3, 4);
@@ -212,11 +151,6 @@ Complex.divide(num1, Complex.ZERO); // Complex.NaN
 ```
 
 #### conjugate(num)
-```
-@param { Complex } num
-@return { Complex } - Returns the complex conjugate
-```
-Note that if the complex number is represented by `a + bi`, its complex conjugate is given by `a - bi`.
 ```javascript
 Complex.conjugate(new Complex(3, 4)); // 3 - 4i
 Complex.conjugate(new Complex(3, -4)); // 3 + 4i
@@ -226,22 +160,13 @@ Complex.conjugate(Complex.NaN); // Complex.NaN
 ```
 
 #### inverse(num)
-```
-@param { Complex } num
-@return { Complex } - Returns the inverse
-```
 ```javascript
 Complex.inverse(new Complex(3, 4)); // 3 / 25 - 4i / 25
 Complex.inverse(Complex.ZERO); // Complex.NaN
 ```
 
 #### pow(base, exponent)
-```
-@param { Complex } base
-@param { Complex | Number } exponent
-@return { Complex } - Returns the result of the exponentiation
-```
-The `exponent` can be either `js Number` or instance of `Complex`.\
+The `exponent` can be either `number` or instance of `Complex`.\
 You can find the k-th root of complex number by setting the exponent to `1 / k`. But you **should** know that it only returns one out of k possible solutions.
 ```javascript
 Complex.pow(z, 2); // z to the power of 2
@@ -252,20 +177,12 @@ Complex.pow(z, 1 / 4); // one of the 4-th root of z
 ```
 
 #### exp(num)
-```
-@param { Complex } num
-@return { Complex } - Returns e to the power of num
-```
 ```javascript
 Complex.exp(Complex.ZERO); // Complex.ONE
 Complex.exp(new Complex(3, 4)); // -13.128783... - 15.200784463...i
 ```
 
 #### log(num)
-```
-@param { Complex } num
-@return { Complex } - Returns the result after taking natural log
-```
 It calculates the natural log of the complex number.\
 Note that the complex log is a multivalued function, but this function only returns the principal value by restricting the imaginary part to the interval [0, 2π).
 ```javascript
@@ -274,10 +191,6 @@ Complex.log(Complex.ZERO); // Complex.NaN
 ```
 
 #### 6 trigonometric functions
-```
-@param { Complex } num
-@return { Complex } - Returns the result of the trigo functions
-```
 It calculates the value of sin, cos, tan, csc, sec, cot of the complex number.\
 Note that if the argument is out of its domain, it returns `Complex.NaN`
 ```javascript
@@ -298,10 +211,6 @@ Complex.cot(Complex.PI); // Complex.NaN
 ```
 
 #### 6 inverse of trigonometric functions
-```
-@param { Complex } num
-@return { Complex } - Returns the result of the inverse trigo functions
-```
 It calculates the value of arcsin, arccos, arctan, arccsc, arcsec, arccot of the complex number.\
 Note that if the argument is out of its domain, it returns `Complex.NaN`
 ```javascript
@@ -321,11 +230,5 @@ You are welcome to contribute by:
 - Improving performance
 - Improving code style of this library
 
-## Copyright & License
-Copyright (C) 2020 Ray Yam
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+## License
+MIT

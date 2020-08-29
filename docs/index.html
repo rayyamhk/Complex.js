@@ -56,6 +56,193 @@
 
 
 
+    <section class="readme usertext">
+        <article><h1>Complex.js</h1>
+<p>A lightweight and easy-to-use library for you to manipulate complex numbers</p>
+<h2>Features</h2>
+<ul>
+<li>Lightweight</li>
+<li>Comprehensive</li>
+<li>Easy to use</li>
+<li>No dependencies</li>
+<li>1000+ Test cases</li>
+<li>No INFINITY!!</li>
+</ul>
+<h2>Install</h2>
+<pre class="prettyprint source"><code>npm install --save @rayyamhk/complex
+</code></pre>
+<h2>How to use</h2>
+<pre class="prettyprint source lang-javascript"><code>const Complex = require('@rayyamhk/complex');
+
+const num1 = new Complex(3, 4); // 3 + 4i
+const num2 = new Complex(-2); // -2 + 0i
+const sum = Complex.add(num1, num2);
+console.log(sum.toString()); // '1 + 4i'
+</code></pre>
+<h2>Build</h2>
+<pre class="prettyprint source"><code>npm install
+npm run build
+</code></pre>
+<p>It creates a production version in <code>/build</code></p>
+<h2>Test</h2>
+<pre class="prettyprint source"><code>npm install
+npm run test
+</code></pre>
+<p>It runs all tests in <code>/lib/tests</code></p>
+<h2>API</h2>
+<p>https://rayyamhk.github.io/Complex.js/index.html</p>
+<h3>constructor(re, im)</h3>
+<pre class="prettyprint source lang-javascript"><code>new Complex(); // Complex.NaN
+new Complex(3); // 3 + 0i
+new Complex(Infinity); // Complex.NaN
+new Complex('3'); // Complex.NaN
+new Complex(3, 4); // 3 + 4i
+new Complex(3, Infinity); // Complex.NaN
+</code></pre>
+<h3>Constant</h3>
+<h4>Complex.NaN</h4>
+<p>It represents <code>NaN</code> in this library. It is equivalent to <code>new Complex(NaN)</code>.
+It is <strong>important</strong> to know that this library doesn't introduce the concept of <code>Complex Infinity</code>, all <code>Infinity</code> in this library
+are represented by <code>Complex.NaN</code>.</p>
+<pre class="prettyprint source lang-javascript"><code>const num = new Complex(3, 4);
+const quot = Complex.divide(num, Complex.ZERO); // Complex.NaN
+</code></pre>
+<h4>Complex.ONE</h4>
+<p>It is equivalent to <code>new Complex(1)</code></p>
+<h4>Complex.ZERO</h4>
+<p>It is equivalent to <code>new Complex(0)</code></p>
+<h4>Complex.PI</h4>
+<p>It is equivalent to <code>new Complex(Math.PI)</code></p>
+<h4>Complex.E</h4>
+<p>It is equivalent to <code>new Complex(Math.E)</code></p>
+<h4>Complex.EPSILON</h4>
+<p>It represents the value of <code>5e-16</code>, which is the smallest number considered as <code>non-zero</code> in this library. In the other words, any number less than <code>Complex.EPSILON</code>
+is considered as <code>0</code>. Note that <code>Complex.EPSILON</code> is <code>js Number</code> instead of instance of <code>Complex</code>.</p>
+<h3>Instance methods</h3>
+<h4>getReal()</h4>
+<pre class="prettyprint source lang-javascript"><code>new Complex(3, 4).getReal(); // 3
+new Complex(0, 1).getReal(); // 0
+</code></pre>
+<h4>getImaginary()</h4>
+<pre class="prettyprint source lang-javascript"><code>new Complex(3, 4).getImaginary(); // 4
+Complex.ZERO.getImaginary(); // 0
+</code></pre>
+<h4>getModulus()</h4>
+<p>Note that the modulus of the complex number is the length of the vector representing the complex number on complex plane.</p>
+<pre class="prettyprint source lang-javascript"><code>new Complex(3, 4).getModulus(); // 5
+Complex.ZERO.getModulus(); // 0
+</code></pre>
+<h4>getArgument()</h4>
+<p>Note that the argument of the complex number is the angle between positive real-axis and the vector representing the complex number on complex plane.</p>
+<pre class="prettyprint source lang-javascript"><code>new Complex(3, 3).getArgument(); // π/4
+Complex.ZERO.getArgument(); // undefined
+</code></pre>
+<h4>toString()</h4>
+<pre class="prettyprint source lang-javascript"><code>new Complex(3, 4).toString(); // '3 + 4i'
+new Complex(3.1415).toString(); // '3.1415'
+Complex.NaN.toString(); // 'NaN'
+</code></pre>
+<h3>Static methods</h3>
+<h4>isNaN(num)</h4>
+<pre class="prettyprint source lang-javascript"><code>Complex.isNaN(new Complex(3)); // false
+Complex.isNaN(new Complex(3, 4)); // false
+Complex.isNaN(new Complex(Infinity)); // true
+Complex.isNaN(Complex.NaN); // true
+</code></pre>
+<h4>isEqual(num1, num2, digit = 15)</h4>
+<p>The optional argument <code>digit</code> limits the number of digits to check after the decimal point.<br>
+The test criterion is <code>Math.abs(x - y) &lt; 1 / (10 ** digit * 2)</code>. For default value 15, it should be <code>5e-16</code>.
+That means if the difference of two numbers is less than <code>5e-16</code>, they are considered as same value.</p>
+<pre class="prettyprint source lang-javascript"><code>const num1 = new Complex(3, 4);
+const num2 = new Complex(3 + 4e-16, 4);
+const num3 = new Complex(3 + 4e-16, 4 + 6e-16);
+Complex.isEqual(num1, num2); // true as the diff of real parts is less than 5e-16
+Complex.isEqual(num1, num3); // false as the diff of imaginary parts is greater than 5e-16
+
+Complex.isEqual(Complex.NaN, new Complex(1 / 0)); // true as both are considered as NaN
+</code></pre>
+<h4>4 basic operations</h4>
+<p>Note that for <code>Complex.divide</code>, if the denominator, i.e. <code>num2</code>, is considered as <code>0</code>, it returns <code>Complex.NaN</code>.</p>
+<pre class="prettyprint source lang-javascript"><code>const num1 = new Complex(3, 4);
+const num2 = new Complex(-1, 2);
+
+Complex.add(num1, num2); // 2 + 6i
+Complex.subtract(num1, num2); // 4 + 2i
+Complex.multiply(num1, num2); // -11 + 2i
+Complex.divide(num1, num2); // 1 - 2i
+Complex.divide(num1, Complex.ZERO); // Complex.NaN
+</code></pre>
+<h4>conjugate(num)</h4>
+<pre class="prettyprint source lang-javascript"><code>Complex.conjugate(new Complex(3, 4)); // 3 - 4i
+Complex.conjugate(new Complex(3, -4)); // 3 + 4i
+Complex.conjugate(new Complex(-3, 4)); // -3 - 4i
+Complex.conjugate(new Complex(3)); // 3 - 0i
+Complex.conjugate(Complex.NaN); // Complex.NaN
+</code></pre>
+<h4>inverse(num)</h4>
+<pre class="prettyprint source lang-javascript"><code>Complex.inverse(new Complex(3, 4)); // 3 / 25 - 4i / 25
+Complex.inverse(Complex.ZERO); // Complex.NaN
+</code></pre>
+<h4>pow(base, exponent)</h4>
+<p>The <code>exponent</code> can be either <code>number</code> or instance of <code>Complex</code>.<br>
+You can find the k-th root of complex number by setting the exponent to <code>1 / k</code>. But you <strong>should</strong> know that it only returns one out of k possible solutions.</p>
+<pre class="prettyprint source lang-javascript"><code>Complex.pow(z, 2); // z to the power of 2
+Complex.pow(z, 1.234); // z to the power of 1.234
+Complex.pow(z, 0); // Complex.ONE
+Complex.pow(z, -2); // 1 divided by z to the power of 2
+Complex.pow(z, 1 / 4); // one of the 4-th root of z
+</code></pre>
+<h4>exp(num)</h4>
+<pre class="prettyprint source lang-javascript"><code>Complex.exp(Complex.ZERO); // Complex.ONE
+Complex.exp(new Complex(3, 4)); // -13.128783... - 15.200784463...i
+</code></pre>
+<h4>log(num)</h4>
+<p>It calculates the natural log of the complex number.<br>
+Note that the complex log is a multivalued function, but this function only returns the principal value by restricting the imaginary part to the interval [0, 2π).</p>
+<pre class="prettyprint source lang-javascript"><code>Complex.log(Complex.E); // Complex.ONE
+Complex.log(Complex.ZERO); // Complex.NaN
+</code></pre>
+<h4>6 trigonometric functions</h4>
+<p>It calculates the value of sin, cos, tan, csc, sec, cot of the complex number.<br>
+Note that if the argument is out of its domain, it returns <code>Complex.NaN</code></p>
+<pre class="prettyprint source lang-javascript"><code>Complex.sin(num); // Domain: entire complex plane C
+Complex.cos(num); // Domain: entire complex plane C
+
+Complex.tan(num); // Domain: entire complex plane C except the set { (2k+1)*π/2 : k is any integer }
+Complex.tan(new Complex(Math.PI / 2)); // Complex.NaN
+
+Complex.csc(num); // Domain: entire complex plane C except the set { kπ : k is any integer }
+Complex.csc(Complex.ZERO); // Complex.NaN
+
+Complex.sec(num); // Domain: entire complex plane C except the set { (2k+1)*π/2 : k is any integer }
+Complex.sec(new Complex(Math.PI / 2)); // Complex.NaN
+
+Complex.cot(num); // Domain: entire complex plane C except the set { kπ/2 : k is any integer }
+Complex.cot(Complex.PI); // Complex.NaN
+</code></pre>
+<h4>6 inverse of trigonometric functions</h4>
+<p>It calculates the value of arcsin, arccos, arctan, arccsc, arcsec, arccot of the complex number.<br>
+Note that if the argument is out of its domain, it returns <code>Complex.NaN</code></p>
+<pre class="prettyprint source lang-javascript"><code>Complex.asin(num); // Domain: entire complex plane C
+Complex.acos(num); // Domain: entire complex plane C
+Complex.atan(num); // Domain: entire complex plane C except the set { i, -i }
+Complex.acsc(num); // Domain: entire complex plane C except the set { 0 }
+Complex.asec(num); // Domain: entire complex plane C except the set { 0 }
+Complex.acot(num); // Domain: entire complex plane C except the set { i, -i , 0 }
+</code></pre>
+<h2>How to contribute</h2>
+<p>You are welcome to contribute by:</p>
+<ul>
+<li>Reporting bugs</li>
+<li>Fixing bugs</li>
+<li>Adding new features</li>
+<li>Improving performance</li>
+<li>Improving code style of this library</li>
+</ul>
+<h2>License</h2>
+<p>MIT</p></article>
+    </section>
+
 
 
 
@@ -68,7 +255,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a> on Sat Aug 29 2020 18:01:10 GMT+0800 (GMT+08:00) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a> on Sat Aug 29 2020 18:29:50 GMT+0800 (GMT+08:00) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

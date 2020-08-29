@@ -27,7 +27,8 @@
   "main": "lib/index",
   "scripts": {
     "test": "eslint && jest --testPathPattern=src/tests",
-    "build": "babel src --out-dir lib --ignore src/**/*.test.js"
+    "build": "babel src --out-dir lib --ignore src/**/*.test.js",
+    "jsdoc": "jsdoc -c ./jsdoc.config.json ./README.md"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
