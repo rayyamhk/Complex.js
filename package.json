@@ -26,8 +26,9 @@
   "license": "MIT",
   "main": "lib/index",
   "scripts": {
-    "build": "npm run test && babel src --out-dir lib --ignore src/**/*.test.js",
-    "test": "eslint && jest --testPathPattern=src/tests"
+    "test": "eslint && jest --testPathPattern=src/tests",
+    "build": "babel src --out-dir lib --ignore src/**/*.test.js",
+    "publish": "npm publish --access public"
   },
   "husky": {
     "hooks": {
