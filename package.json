@@ -1,6 +1,6 @@
 {
   "name": "@rayyamhk/complex",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "author": "Ray Yam",
   "contributors": [
     "Ray Yam"
@@ -28,7 +28,6 @@
   "scripts": {
     "test": "eslint && jest --testPathPattern=src/tests",
     "build": "babel src --out-dir lib --ignore src/**/*.test.js",
-    "publish": "npm publish --access public"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
