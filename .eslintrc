@@ -18,6 +18,7 @@
     "linebreak-style": ["error", "windows"]
   },
   "ignorePatterns": [
-    "lib/*.js"
+    "lib/*.js",
+    "docs/**/*.js"
   ]
 }

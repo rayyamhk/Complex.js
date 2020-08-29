@@ -1,8 +1,8 @@
 /**
- * Returns a Complex Number
- * @param { Number } arg1 - real part of the complex number
- * @param { Number } arg2 - imaginary part of the complex number
- * @return { Complex } - Complex Number
+ * Creates a new Complex Number
+ * @class
+ * @param {number} arg1 - The real part of the Complex Number
+ * @param {number} arg2 - The imaginary part of the Complex Number
  */
 function Complex(arg1, arg2) {
   const type1 = typeof arg1;
@@ -37,35 +37,35 @@ function Complex(arg1, arg2) {
   return this;
 }
 
-Complex.prototype.getReal = require('./core/getReal');
-Complex.prototype.getImaginary = require('./core/getImaginary');
-Complex.prototype.getModulus = require('./core/getModulus');
-Complex.prototype.getArgument = require('./core/getArgument');
-Complex.prototype.toString = require('./core/toString');
+Complex.prototype.getReal = require('./core/instance/getReal');
+Complex.prototype.getImaginary = require('./core/instance/getImaginary');
+Complex.prototype.getModulus = require('./core/instance/getModulus');
+Complex.prototype.getArgument = require('./core/instance/getArgument');
+Complex.prototype.toString = require('./core/instance/toString');
 
-Complex.isNaN = require('./core/isNaN');
-Complex.isEqual = require('./core/isEqual');
-Complex.conjugate = require('./core/conjugate');
-Complex.inverse = require('./core/inverse');
-Complex.add = require('./core/add');
-Complex.subtract = require('./core/subtract');
-Complex.multiply = require('./core/multiply');
-Complex.divide = require('./core/divide');
-Complex.exp = require('./core/exp');
-Complex.log = require('./core/log');
-Complex.pow = require('./core/pow');
-Complex.sin = require('./core/sin');
-Complex.cos = require('./core/cos');
-Complex.tan = require('./core/tan');
-Complex.csc = require('./core/csc');
-Complex.sec = require('./core/sec');
-Complex.cot = require('./core/cot');
-Complex.asin = require('./core/asin');
-Complex.acos = require('./core/acos');
-Complex.atan = require('./core/atan');
-Complex.acsc = require('./core/acsc');
-Complex.asec = require('./core/asec');
-Complex.acot = require('./core/acot');
+Complex.isNaN = require('./core/static/isNaN');
+Complex.isEqual = require('./core/static/isEqual');
+Complex.conjugate = require('./core/static/conjugate');
+Complex.inverse = require('./core/static/inverse');
+Complex.add = require('./core/static/add');
+Complex.subtract = require('./core/static/subtract');
+Complex.multiply = require('./core/static/multiply');
+Complex.divide = require('./core/static/divide');
+Complex.exp = require('./core/static/exp');
+Complex.log = require('./core/static/log');
+Complex.pow = require('./core/static/pow');
+Complex.sin = require('./core/static/sin');
+Complex.cos = require('./core/static/cos');
+Complex.tan = require('./core/static/tan');
+Complex.csc = require('./core/static/csc');
+Complex.sec = require('./core/static/sec');
+Complex.cot = require('./core/static/cot');
+Complex.asin = require('./core/static/asin');
+Complex.acos = require('./core/static/acos');
+Complex.atan = require('./core/static/atan');
+Complex.acsc = require('./core/static/acsc');
+Complex.asec = require('./core/static/asec');
+Complex.acot = require('./core/static/acot');
 
 Complex.NaN = new Complex(NaN);
 Complex.ONE = new Complex(1);
